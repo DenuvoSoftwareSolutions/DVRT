@@ -1,0 +1,22 @@
+title: "How Meltdown and Spectre haunt Anti-Cheat: DVRT details"
+author:
+  name: "Anti-Cheat Team @ Denuvo"
+description: "Denuvo by Irdeto's Anti-Cheat team is located in Wroclaw, Poland and Salzburg, Austria. Its mission is to stealthily detect cheating attempts and provide evidence for best-in-class anti-cheat solutions employed by global gaming customers."
+remote_theme: jekyll/minima
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+
+header_pages:
+  -
+
+minima:
+  # generate social links in footer
+  social_links:
+    twitter: gamingatdenuvo
+    github:  denuvosoftwaresolutions
+    linkedincompany: denuvo-gmbh
