@@ -4,7 +4,10 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <div class="site-title"><img alt="Denuvo by Irdeto" src="denuvo-by-irdeto.png" style="padding-right: 30px;"><span style="display:block;">{{ site.title | escape }}<span></div> 
+    <div class="site-title">
+      <img alt="Denuvo by Irdeto" src="denuvo-by-irdeto.png" style="padding-right: 30px;">
+      <a href="{{ "/" | relative_url }}" style="display:block;">{{ site.title | escape }}</a>
+    </div> 
 
     {%- if titles_size > 0 -%}
       <nav class="site-nav">
