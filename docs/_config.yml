@@ -1,15 +1,24 @@
 title: "How Meltdown and Spectre haunt Anti-Cheat: DVRT details"
 author:
   name: "Anti-Cheat Team @ Denuvo"
-description: "Denuvo by Irdeto's Anti-Cheat team is located in Wroclaw, Poland and Salzburg, Austria. Its mission is to stealthily detect cheating attempts and provide evidence for best-in-class anti-cheat solutions employed by global gaming customers."
+bio: "Denuvo by Irdeto's Anti-Cheat team is located in Wroclaw, Poland and Salzburg, Austria. Its mission is to stealthily detect cheating attempts and provide evidence for best-in-class anti-cheat solutions employed by global gaming customers."
 remote_theme: jekyll/minima
 
 defaults:
   -
     scope:
-      path: ""
+      path: "haunted*"
     values:
       layout: default
+      image: https://denuvosoftwaresolutions.github.io/DVRT/spectre-anticheat.png
+      description: "How Meltdown and Spectre haunt Anti-Cheat."
+  -
+    scope:
+      path: "dvrt*"
+    values:
+      layout: default
+      image: https://denuvosoftwaresolutions.github.io/DVRT/dumpbin-dvrt.png
+      description: "Dynamic Value Relocation Table (DVRT) details."
 
 header_pages:
   -
