@@ -6,7 +6,11 @@ For the story that led us down the rabbit hole and straight to this post (not re
 Retpoline changes are done ad-hoc when loading a kernel module to the memory in order to mitigate Spectre CPU vulnerabilities. Retpolines allow to replace an indirect call or jump with a sequence that has a safe speculation behavior. The question is how does the OS accomplish these changes -- how does it know where the replacements need to be applied? Where is all the information kept?
 
 ## DVRT
-Dynamic Value Relocation Table (DVRT) is a metadata built into the binary during compilation phase. It's not a new format designed specifically for retpoline - it was introduced in the past, but the DVRT format was extended for the purpose of mitigating the Spectre v2. It is kept in the load config directory of the binary file.
+Dynamic Value Relocation Table (DVRT) is a metadata built into the binary during compilation phase. It's not a new format designed specifically for retpoline -- it was introduced in the past, but the DVRT format was extended for the purpose of mitigating Spectre v2. It can be found via the [Windows PE32 load config directory](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#the-load-configuration-structure-image-only) of an executable file (not covered by documentation yet). For example, `dumpbin /loadconfig win32k.sys` will give the output below:
+
+![Load Config in dumpbin](dumpbin-dvrt.png)
+
+Note: `dumpbin` ships as part of the native tools of Visual Studio, use the "x64 Native Tools Command Prompt". `win32k.sys` is in `C:\Windows\System32`.
 
 DVRT format contains a lot of information, but for the sake of this article we will focus on just two fields:
 ```
@@ -211,3 +215,4 @@ We have dissected and documented these novel data structures.
 
 Related work:
 * [Discovering a new relocation entry of ARM64X in recent Windows 10 on Arm](https://ffri.github.io/ProjectChameleon/new_reloc_chpev2/#new-dynamic-value-relocation-table-dvrt-image_dynamic_relocation_arm64x)
+* [Mitigating Spectre variant 2 with Retpoline on Windows](https://techcommunity.microsoft.com/t5/windows-kernel-internals-blog/mitigating-spectre-variant-2-with-retpoline-on-windows/ba-p/295618)

@@ -11,14 +11,14 @@ defaults:
     values:
       layout: default
       image: https://denuvosoftwaresolutions.github.io/DVRT/spectre-anticheat.png
-      description: "How Meltdown and Spectre haunt Anti-Cheat."
+      description: "Background story that led to investigate Windows DVRT details."
   -
     scope:
       path: "dvrt*"
     values:
       layout: default
       image: https://denuvosoftwaresolutions.github.io/DVRT/dumpbin-dvrt.png
-      description: "Dynamic Value Relocation Table (DVRT) details."
+      description: "Breakdown of the DVRT format and retpoline types."
 
 header_pages:
   -

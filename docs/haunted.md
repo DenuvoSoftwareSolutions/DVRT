@@ -3,6 +3,8 @@
 ## Abstract
 Puzzled by our observation of modified versions of Windows kernel components seen in the wild, we started to research the origins of these modifications. What we discovered are the artifacts of mitigations for well-known CPU side-channel vulnerabilities. In this article, we have a closer look at these potential attacks and how they are addressed by the Windows operating system. Finally, we discover and document the mechanics used in Windows executable files to help apply the mitigations, and point out that their understanding is crucial for an Anti-Cheat solution.
 
+![Meltdown and Spectre vs Anti-Cheat](spectre-anticheat.png)
+
 ## Introduction
 One of the tactics widely used by cheaters in multiplayer games is modifying the software loaded into memory by overwriting the original code of the process, or by injecting their own code. This can give them advantage in many ways -- they can modify the code of the game itself to overcome the obstacles that other players have to deal with (i.e. seeing enemies through walls or gain infinite amount of health). They can also modify third party software (e.g. the keyboard or mouse driver) in order to emulate input. One of the biggest challenges of anti-cheat software is to detect such modifications and to justify whether they are a cheat or just expected variations. But what happens if the operating system itself starts to modify the code while loading it into memory, and is doing it outwardly in a quite unpredictable way?
 
