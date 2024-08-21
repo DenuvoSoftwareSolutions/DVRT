@@ -1,6 +1,6 @@
 # Dynamic Value Relocation Table (DVRT) details
 
-For the story that led us down the rabbit hole and straight to this post (not really, we took some detours), see [How Meltdown and Spectre haunt Anti-Cheat](haunted).
+For the story that led us down the rabbit hole and straight to this post (not really, we took some detours), see [How Meltdown and Spectre haunt Anti-Cheat](haunted.md).
 
 ### Retpoline
 Retpoline changes are done ad-hoc when loading a kernel module to the memory in order to mitigate Spectre CPU vulnerabilities. Retpolines allow to replace an indirect call or jump with a sequence that has a safe speculation behavior. The question is how does the OS accomplish these changes -- how does it know where the replacements need to be applied? Where is all the information kept?

@@ -78,4 +78,4 @@ does the OS accomplish these changes -- how does it know where the replacements 
 Where is all the information kept?
 
 ## Outlook
-The answer is the Dynamic Value Relocation Table (DVRT), to be found via the *load config* directory of a Windows PE32 binary file. We will take a closer look in a [follow-up post](dvrt).
+The answer is the Dynamic Value Relocation Table (DVRT), to be found via the *load config* directory of a Windows PE32 binary file. We will take a closer look in a [follow-up post](dvrt.md).
